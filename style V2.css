@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+input, textarea, select, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #74ebd5;
+  box-shadow: 0 0 5px rgba(116, 235, 213, 0.5);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.metrics {
+  margin: 1rem 0;
+  background: rgba(255,255,255,0.6);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.task.completed {
+  background-color: #d4edda;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+button {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  background-color: #111;
+}
+
+#logout-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #c0392b;
+}
+
+#user-info {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

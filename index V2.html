@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control de Incidencias</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Control de Incidencias</h1>
+    <div id="user-info"></div>
+    <button id="logout-btn" class="hidden">Cerrar sesión</button>
+  </header>
+
+  <main>
+    <section id="auth-section">
+      <h2>Registro / Inicio de sesión</h2>
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" placeholder="Usuario" />
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" placeholder="Contraseña" />
+      <div class="auth-buttons">
+        <button id="register-btn">Registrarse</button>
+        <button id="login-btn">Iniciar sesión</button>
+      </div>
+    </section>
+
+    <section id="task-section" class="hidden">
+      <h2>Tareas</h2>
+
+      <div class="filters">
+        <label for="search">Buscar:</label>
+        <input type="text" id="search" placeholder="Buscar tarea..." />
+        <label for="filter-priority">Prioridad:</label>
+        <select id="filter-priority">
+          <option value="">Todas</option>
+          <option value="Alta">Alta</option>
+          <option value="Media">Media</option>
+          <option value="Baja">Baja</option>
+        </select>
+      </div>
+
+      <form id="task-form">
+        <label for="task-title">Título:</label>
+        <input type="text" id="task-title" placeholder="Título" required />
+
+        <label for="task-desc">Descripción:</label>
+        <textarea id="task-desc" placeholder="Descripción"></textarea>
+
+        <label for="task-deadline">Fecha límite:</label>
+        <input type="date" id="task-deadline" required />
+
+        <label for="task-priority">Prioridad:</label>
+        <select id="task-priority">
+          <option value="Alta">Alta</option>
+          <option value="Media">Media</option>
+          <option value="Baja">Baja</option>
+        </select>
+
+        <button type="submit">Agregar Tarea</button>
+      </form>
+
+      <div class="metrics">
+        <p>Total tareas: <span id="total-tasks">0</span></p>
+        <p>Completadas: <span id="completed-tasks">0</span></p>
+        <p>Pendientes: <span id="pending-tasks">0</span></p>
+      </div>
+
+      <div id="tasks-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
